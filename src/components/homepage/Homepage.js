@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import ProductList from './ProductList.js';
+import { Link } from 'react-router-dom';
 import 'particles.js';
 
-const ProductsContainer = ({ products }) => {
-
+const HomePage = () => {
   useEffect(() => {
     window.particlesJS('particles-js', {
       "particles": {
@@ -75,11 +74,15 @@ const ProductsContainer = ({ products }) => {
   
 
   return (
-    <div>
+    <>
       <div id="particles-js" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}></div>
-      <ProductList products={products} />
-    </div>
+      <div className="d-flex flex-column min-vh-100 justify-content-center align-items-center text-center" style={{ position: 'relative', zIndex: 1 }}>
+        <h1 className="display-2">Welcome to Our Online Store</h1>
+        <p className="lead">Discover our amazing products, from electronics to clothing.</p>
+        <Link to="/products" className="btn btn-lg btn-primary">Explore Now</Link>
+      </div>
+    </>
   );
 };
 
-export default ProductsContainer;
+export default HomePage;
