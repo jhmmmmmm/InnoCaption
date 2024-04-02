@@ -11,10 +11,10 @@ Open your browser and navigate to `http://localhost:3000` to view the project.
 
 ## Homepage Preview
 
-![Homepage](https://jmp.sh/vFVoMXOS)
+![Homepage](https://jumpshare.com/v/lER3u3m01HYi3QrGyiJS)
 
-![Product](https://jmp.sh/1cGJI6fW)
+![Product](https://jumpshare.com/v/2YPUu4BuR5cva3gj3J5q)
 
-![Product - Search](https://jmp.sh/QhYHooic)
+![Product - Search](https://jumpshare.com/v/VEFTtsiEaOjbUBsThu4Z)
 
-![Cart](https://jmp.sh/GT1CjAGP)
+![Cart](https://jumpshare.com/v/bL92KBKGCD4vLmMzXyzR)
