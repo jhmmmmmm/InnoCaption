@@ -11,10 +11,14 @@ Open your browser and navigate to `http://localhost:3000` to view the project.
 
 ## Homepage Preview
 
-![Homepage](https://jumpshare.com/v/lER3u3m01HYi3QrGyiJS)
+![Homepage](images/homepage.gif)
 
-![Product](https://jumpshare.com/v/2YPUu4BuR5cva3gj3J5q)
+## Product Page Preview
 
-![Product - Search](https://jumpshare.com/v/VEFTtsiEaOjbUBsThu4Z)
+![Product](images/product.gif)
 
-![Cart](https://jumpshare.com/v/bL92KBKGCD4vLmMzXyzR)
+![Product - Search](images/search.gif)
+
+## Cart Page Preview
+
+![Cart](images/cart.gif)
