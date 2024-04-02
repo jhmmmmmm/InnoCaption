@@ -74,7 +74,9 @@ const NavBar = ({ onSearch, categories, onCategoryChange }) => {
             <Button variant="outline-success" type="submit">Search</Button>
             <Button variant="outline-danger" onClick={handleClearSearch} style={{ marginLeft: '10px' }}>Clear</Button>
           </Form>
-          <CartIcon />
+          <LinkContainer to="/cart">
+            <Nav.Link><CartIcon /></Nav.Link>
+          </LinkContainer>
         </Navbar.Collapse>
       </Container>
     </Navbar>

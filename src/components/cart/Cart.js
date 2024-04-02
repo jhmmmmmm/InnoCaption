@@ -1,43 +1,51 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useCart } from './CartProvider';
 import CartItem from './CartItem';
+import { Container, Card, Button } from 'react-bootstrap';
 
 const Cart = () => {
-  // 假设的初始购物车数据，实际应用中这些数据可能来自于全局状态管理或API
-  const [cartItems, setCartItems] = useState([
-    { id: 1, name: 'Product 1', price: 100, quantity: 1 },
-    { id: 2, name: 'Product 2', price: 200, quantity: 2 },
-    // 更多商品...
-  ]);
+  const { cartItems, removeFromCart, clearCart, updateItemQuantity } = useCart();
 
-  const handleRemoveItem = (itemId) => {
-    setCartItems(cartItems.filter(item => item.id !== itemId));
+  const handleRemove = (itemId) => {
+    removeFromCart(itemId);
   };
 
   const handleQuantityChange = (itemId, quantity) => {
-    setCartItems(
-      cartItems.map(item => 
-        item.id === itemId ? { ...item, quantity: quantity } : item
-      )
-    );
+    updateItemQuantity(itemId, quantity);
   };
+  const cartTotalPrice = cartItems.reduce((total, item) => total + item.quantity * item.price, 0);
 
   return (
-    <div className="container mt-3">
-      <h2>Your Cart</h2>
-      <div className="list-group">
-        {cartItems.map(item => (
-          <CartItem
-            key={item.id}
-            item={item}
-            onRemove={handleRemoveItem}
-            onQuantityChange={handleQuantityChange}
-          />
-        ))}
-      </div>
-      <div className="mt-3">
-        Total: ${cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}
-      </div>
+    <div>
+      <Container className='mt-3'>
+        <h2>Your Shopping Cart</h2>
+        <Card className="mt-3">
+          <Card.Body>
+            {cartItems.length > 0 ? (
+              cartItems.map(item => (
+                <CartItem
+                  key={item.id}
+                  item={item}
+                  onRemove={handleRemove}
+                  onQuantityChange={handleQuantityChange}
+                />
+              ))
+            ) : (
+              <span>Your cart is empty.</span>
+            )}
+            <div className="text-center mt-4">
+            Total Price: ${cartTotalPrice.toFixed(2)}
+            </div>
+          </Card.Body>
+          <Card.Footer className="text-center">
+            
+            <Button onClick={clearCart} variant="secondary" className="me-2">Clear Cart</Button>
+              <Button onClick={() => console.log('Checkout')} variant="primary">Proceed to Checkout</Button>
+          </Card.Footer>
+        </Card>
+      </Container>
     </div>
+
   );
 };
 
