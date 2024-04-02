@@ -13,11 +13,16 @@ Open your browser and navigate to `http://localhost:3000` to view the project.
 
 ![Homepage](gif/homepage.gif)
 
+
 ## Product Page Preview
 
 ![Product](gif/product.gif)
 
+
+## Product Search Preview
+
 ![Product - Search](gif/search.gif)
+
 
 ## Cart Page Preview
 
