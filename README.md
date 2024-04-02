@@ -11,14 +11,14 @@ Open your browser and navigate to `http://localhost:3000` to view the project.
 
 ## Homepage Preview
 
-![Homepage](images/homepage.gif)
+![Homepage](gif/homepage.gif)
 
 ## Product Page Preview
 
-![Product](images/product.gif)
+![Product](gif/product.gif)
 
-![Product - Search](images/search.gif)
+![Product - Search](gif/search.gif)
 
 ## Cart Page Preview
 
-![Cart](images/cart.gif)
+![Cart](gif/cart.gif)
